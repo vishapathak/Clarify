@@ -1,10 +1,22 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Component/Navbar";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Contact from "./Component/Contact";
+import FAQs from "./Component/Faq";
 
 function App() {
   return (
-    <div className="flex flex-col h-full items-center justify-center bg-gray-200 text-gray-700">
-      This is development branch code
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" Component={Home} exact></Route>
+        <Route path="/about" Component={About}></Route>
+        <Route path="/contact" Component={Contact}></Route>
+        <Route path="/faq" Component={FAQs}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

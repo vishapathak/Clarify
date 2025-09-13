@@ -28,6 +28,7 @@ export default function Navbar() {
           FAQs
         </Link>
       </div>
+
       <GiHamburgerMenu className={`${isOpen===true ? "text-black":"text-white"} block lg:hidden relative z-50` } onClick={()=>setIsOpen(!isOpen)} />
       {/* drawer */}
      {isOpen===true && <div className="bg-white shadow-lg absolute z-40 right-0 top-0 flex flex-col h-screen w-[20%] pt-20 gap-6 text-lg pl-12">

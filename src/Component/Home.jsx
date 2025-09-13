@@ -3,6 +3,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 export default function Home() {
+  const images=["/Image/balance.jpg", "/Image/data.jpg", "/Image/digital.jpg", "/Image/financial.jpg"]
   return (
     <div>
       <main className="w-full flex flex-col lg:flex-row gap-10 pt-12">
@@ -31,37 +32,28 @@ export default function Home() {
           scrollamount="10"
           className="text-black"
         >
-          .......Our Vision is to make Accounting Easy.......Our Vision is to make Accounting Easy.......Our
-          vision is to Make Accounting Easy.......We Vision is to Make Accounting Easy.......Our Vision is make
-          Accounting Easy.......
+          ......We Made Accounting Easy.......We Made Accounting Easy.......We Made Accounting Easy.......We Made Accounting Easy.......We Made Accounting Easy.......
         </marquee>
       </div>
-      <div className=" w-[600px] mx-auto mt-12">
+      {/* swiper tag for scroll the images */}
+      <div className="w-full mx-auto mt-12">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView={3}
-          navigation={true}
+         navigation={true}
           loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+        }}
         >
-          <SwiperSlide>
+         {images.map(image => <SwiperSlide>
             {" "}
-            <img src="/Image/balance.jpg" alt="logo1" className="h-40 " />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/Image/data.jpg" alt="logo1" className="h-40 " />
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <img src="/Image/financial.jpg" alt="logo1" className="h-40" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="Image/alessio-zaccaria-MplUOXqEUK0-unsplash.jpg"
-              alt="logo1"
-              className="h-40 "
-            />
-          </SwiperSlide>
+            <img src={image} alt="logo1" className="h-72 " />
+          </SwiperSlide>)}
+          
+          
         </Swiper>
       </div>
     </div>

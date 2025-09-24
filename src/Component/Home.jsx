@@ -24,7 +24,7 @@ export default function Home() {
           <img src="/image/Hero_section.jpg" alt="" />
         </section>
       </main>
-      {/* marquee  tag */}
+      {/* marquee  tag  for text sliding */}
       <div className="w-full text-3xl font-bold">
         <marquee
           behavior="scroll"

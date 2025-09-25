@@ -6,6 +6,8 @@ import About from "./Component/About";
 import Contact from "./Component/Contact";
 import FAQs from "./Component/Faq";
 import Registeration from "./Component/Registeration";
+import Footer from "./Component/Footerr";
+import SignIN from "./Component/signIN";
 
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
         <Route path="/contact" Component={Contact}></Route>
         <Route path="/faq" Component={FAQs}></Route>
         <Route path="/register" Component={Registeration}/>
+        <Route path="/SignIN" Component={SignIN}></Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

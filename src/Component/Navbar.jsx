@@ -8,27 +8,32 @@ export default function Navbar() {
   return (
     <div className="w-full h-24 bg-black flex items-center justify-between px-9">
       <Link to="/register">
-        <button className="border border-white text-white px-4 py-2 rounded  ">
-          Sign-in
+        <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black  ">
+          create account
         </button>
       </Link>
       <h1 className=" text-4xl text-white flex items-center justify-auto">
         {" "}
         CLARIFY
       </h1>
-      <div className="text-2xl text-white hidden lg:block">
-        <Link to="/" className="px-3 items-center justify-center">
+      <div className="text-2xl text-white  hidden lg:block">
+        <Link to="/" className="px-3 items-center justify-center hover:text-gray-400">
           Home
         </Link>
-        <Link to="/about" className=" px-3 items-center justify-center">
+        <Link to="/about" className=" px-3 items-center justify-center  hover:text-gray-400">
           About
         </Link>
-        <Link to="/contact" className="px-3 items-center justify-center">
+        <Link to="/contact" className="px-3 items-center justify-center  hover:text-gray-400">
           Contact
         </Link>
-        <Link to="/faq" className=" px-3 items-center justify-center">
+        <Link to="/faq" className=" px-3 items-center justify-center  hover:text-gray-400">
           FAQs
         </Link>
+         <Link to="/sigIn">
+        <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black  ">
+          sign in
+        </button>
+      </Link>
       </div>
 
       <GiHamburgerMenu
@@ -54,6 +59,7 @@ export default function Navbar() {
           </Link>
         </div>
       )}
+      
     </div>
   );
 }

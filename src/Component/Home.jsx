@@ -36,7 +36,7 @@ export default function Home() {
         </marquee>
       </div>
       {/* swiper tag for scroll the images */}
-      <div className="w-full mx-auto mt-12">
+      <div className="w-full mx-auto mt-12 pb-5">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}

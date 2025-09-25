@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Registeration() {
   const [email, setEmail] = useState("");
@@ -7,7 +8,7 @@ export default function Registeration() {
   const [password, setPassword] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(email,fname, lname,password);
+    console.log(email, fname, lname, password);
     setEmail("");
     setFname("");
     setLname("");
@@ -15,10 +16,10 @@ export default function Registeration() {
   }
   return (
     <main className=" flex gap-4 m-4">
-      <section className="w-[60%] h-screen bg-red-400 p-10 justify content-center text-xl">
+      <section className="w-[60%] h-screen p-10 justify content-center text-xl">
         <form onSubmit={handleSubmit}>
           <div className="text-center">
-            <label htmlFor=" " className="pr-3">
+            <label htmlFor=" " className="block mb-2">
               {" "}
               Enter your email
             </label>
@@ -28,11 +29,12 @@ export default function Registeration() {
               placeholder=" enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+            className="border p-2"
             ></input>
           </div>
 
           <div className="text-center">
-            <label htmlFor=" " className="pr-3">
+            <label htmlFor=" " className=" block mb-2">
               {" "}
               Enter first name
             </label>
@@ -42,11 +44,12 @@ export default function Registeration() {
               placeholder=" enter first name"
               value={fname}
               onChange={(event) => setFname(event.target.value)}
+              className="border p-2"
             ></input>
           </div>
 
-          <div className="text-center ">
-            <label htmlFor=" " className="pr-3">
+          <div className="text-center">
+            <label htmlFor=" " className=" block mb-2">
               {" "}
               Enter last name
             </label>
@@ -56,32 +59,48 @@ export default function Registeration() {
               placeholder=" enter last tname"
               value={lname}
               onChange={(event) => setLname(event.target.value)}
+              className=" border p-2"
             ></input>
           </div>
 
           <div className="text-center">
-            <label htmlFor="" className=" pr-3">
+            <label htmlFor="" className=" block mb-2">
               {" "}
               Enter password
-            </label>
+            </label >
             <input
               name="password"
               type="text"
               placeholder=" password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="border p-2"
             ></input>
           </div>
-          <button
+          <div className="text-center pt-4">
+          <button 
             type="submit"
-            className="text-center w-full border-white rounded-lg "
+            className=" border border-black pr-3 text-black  hover:bg-black hover:text-white"
           >
-            Submit
-          </button>
+            Submit </button>
+            <Link to="/sigIn">
+              <button className="text-black border border-black pl-3 hover:bg-black hover:text-white ">
+                sign in
+              </button>
+            </Link>
+            <p className="block "> Already have an account?
+              
+              <Link to="/signIN" className="text-blue-500 underline ml-1">
+                click here
+              </Link>
+              for sign in 
+            </p>
+          </div>
+          
         </form>
       </section>
 
-      <section className="w-[40%] h-screen bg-green-400 p-10">
+      <section className="w-[40%] h-screen p-10">
         <img src="/Image/signin.png" alt="" />
       </section>
     </main>

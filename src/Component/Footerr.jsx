@@ -12,7 +12,7 @@ function Footerr() {
         <p> Digital Accounting platform </p>
         <Link to="/register" className="flex justify-center py-3">
           <button className="border border-white text-white px-5 py-2 rounded hover:bg-white hover:text-black transition duration-300">
-            create account
+            Sign up
           </button>
         </Link>
         </div>

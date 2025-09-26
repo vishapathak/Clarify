@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="w-full h-24 bg-black flex items-center justify-between px-9">
       <Link to="/register">
         <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black  ">
-          create account
+          Sign up
         </button>
       </Link>
       <h1 className=" text-4xl text-white flex items-center justify-auto">
@@ -29,11 +29,11 @@ export default function Navbar() {
         <Link to="/faq" className=" px-3 items-center justify-center  hover:text-gray-400">
           FAQs
         </Link>
-         <Link to="/sigIn">
+         {/* <Link to="/sigIn">
         <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black  ">
           sign in
         </button>
-      </Link>
+      </Link> */}
       </div>
 
       <GiHamburgerMenu

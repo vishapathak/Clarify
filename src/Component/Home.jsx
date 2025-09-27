@@ -2,6 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import About from "./About";
+import FAQs from "./Faq";
+import Contact from "./Contact";
+
 export default function Home() {
   const images=["/Image/balance.jpg", "/Image/data.jpg", "/Image/digital.jpg", "/Image/financial.jpg"]
   return (
@@ -52,10 +56,12 @@ export default function Home() {
             {" "}
             <img src={image} alt="logo1" className="h-72 " />
           </SwiperSlide>)}
-          
-          
+            
         </Swiper>
       </div>
+      <About/>
+      <FAQs/>
+      <Contact/>
     </div>
   );
 }

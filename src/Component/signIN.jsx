@@ -13,10 +13,12 @@ export default function SignIN() {
 
   return (
     <main className="flex">
-      <section className="w-[60%] h-screen p-10 justify content-center text-xl text-white">
+      {/* yeh sign page ke signin form vala section hai  */}
+      <section className="w-[60%] h-screen p-10 justify-center text-xl text-white">
+         <h4 className="text-center text-6xl text-black pb-16">Login</h4>
         <form onSubmit={handleSubmit} className="bg-black">
-          <div className=" text-center">
-            <label htmlFor=" " className=" block mb-3">
+          <div className="text-center">
+            <label htmlFor=" " className="block mb-3">
               {" "}
               Enter email
             </label>
@@ -26,10 +28,10 @@ export default function SignIN() {
               placeholder=" enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border p-2"
+              className="border p-2 text-black"
             ></input>
           </div>
-          <div className=" text-center">
+          <div className="text-center">
             <label htmlFor=" " className="block mb-2">
               {" "}
               password
@@ -37,22 +39,22 @@ export default function SignIN() {
             <input
               name="password"
               type="text"
-              placeholder=" password here"
+              placeholder="password here"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className=" border p-2"
+              className="border p-2 text-black"
             ></input>
           </div>
           <div className="text-center py-3">
-          <button type="submit" className=" text-center border border-white  hover:bg-white hover:text-black px-2 ">
+          <button type="submit" className="text-center border border-white  hover:bg-white hover:text-black px-2 ">
             Login
           </button>
            <Link to="/register">
-          <button className="  border border-white ml-5  hover:bg-white hover:text-black px-2"> 
+          <button className="border border-white ml-5  hover:bg-white hover:text-black px-2"> 
             Back
             </button>
             </Link>
-            <p className="block text-white " > Don't have an account?
+            <p className="block text-white" > Don't have an account?
               
               <Link to="/register" className="text-blue-500 underline ml-1">
                 click here
@@ -62,7 +64,7 @@ export default function SignIN() {
           </div>
         </form>
       </section>
-
+       {/* yeh sign page ke side me jo photo hai us ka section hai */}
       <section className="w-[40%] h-screen p-10">
         <img src="/Image/signin.png" alt="" />
       </section>

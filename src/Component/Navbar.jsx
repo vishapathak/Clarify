@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,15 +21,15 @@ export default function Navbar() {
         <Link to="/" className="px-3 items-center justify-center hover:text-gray-400">
           Home
         </Link>
-        <Link to="/about" className=" px-3 items-center justify-center  hover:text-gray-400">
+        <HashLink smooth to ="#about-us" className=" px-3 items-center justify-center  hover:text-gray-400">
           About
-        </Link>
-        <Link to="/contact" className="px-3 items-center justify-center  hover:text-gray-400">
+        </HashLink>
+        <HashLink to="#contact" className="px-3 items-center justify-center  hover:text-gray-400">
           Contact
-        </Link>
-        <Link to="/faq" className=" px-3 items-center justify-center  hover:text-gray-400">
+        </HashLink>
+        <HashLink to="#faq" className=" px-3 items-center justify-center  hover:text-gray-400">
           FAQs
-        </Link>
+        </HashLink>
          {/* <Link to="/sigIn">
         <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black  ">
           sign in

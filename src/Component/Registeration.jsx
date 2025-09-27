@@ -19,10 +19,11 @@ export default function Registeration() {
   return (
     <main className=" flex gap-4 m-4">
       <section className="w-[60%] h-screen p-10 justify content-center text-xl">
-        <form onSubmit={handleSubmit} className="bg-black p-8">
+         <h4 className="text-center text-6xl text-black pb-16">Create Account</h4>
+        <form onSubmit={handleSubmit} className= "min-w-full bg-black p-8">
           
 
-          <div className="text-center flex ">
+          <div className=" text-center flex ">
             <label htmlFor=" " className=" block mb-2 text-white ">
               {" "}
                 Enter first name
@@ -33,12 +34,12 @@ export default function Registeration() {
               placeholder=" enter first name"
               value={fname}
               onChange={(event) => setFname(event.target.value)}
-              className="border border-white  p-2"
+              className="border border-white p-2"
             ></input>
           {/* </div>
 
           <div className="text-center"> */}
-            <label htmlFor=" " className=" block mb-2 text-white px-4">
+            <label htmlFor=" " className="lg:block mb-2 text-white px-4">
               {" "}
               Enter last name
             </label>
@@ -107,7 +108,7 @@ export default function Registeration() {
             </Link>
             <p className="block text-white " > Already have an account?
               
-              <Link to="/signIN" className="text-blue-500 underline ml-1">
+              <Link to="/signin" className="text-blue-500 underline ml-1">
                 click here
               </Link>
               for sign in 
